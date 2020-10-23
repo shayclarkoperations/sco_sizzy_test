@@ -1,15 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>full screenshot iframe bug test</title>
-    
+    <style>
+        .hero {
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        .video {
+            align-self: center;
+            border-radius: 7px;
+        }
+
+        .video iframe {
+            box-shadow:
+                12px 12px 0px #3dc4b6,
+                18px 18px 8px #A2AAB0;
+        }
+
+        .intro {
+            font-size: 20px;
+            font-weight: 400;
+            padding: 20px;
+            border-radius: 7px;
+        }
+
+        .intro ul {
+            padding: 0px;
+            font-size: 16px;
+            margin-bottom: 0px;
+        }
+
+        .intro p {
+            font-weight: 600;
+        }
+
+        .introtext {
+            font-size: 50px !important;
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 38px;
+            margin-top: 20px !important;
+        }
+
+        .introtext,
+        .introtext span {
+            font-weight: 500 !important;
+        }
+
+        @media only screen and (max-width: 976px) {
+            .icongrid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .featurewrapper {
+                max-width: 100%;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .video {
+                text-align: center;
+                margin-top: 20px;
+            }
+
+            .intro {
+                display: grid;
+                text-align: left;
+                padding: 0px;
+            }
+
+            .intro ul {
+                margin: auto;
+                margin-bottom: 10px;
+            }
+
+            .intro p {
+                text-align: center;
+            }
+
+            .introtext {
+                padding: 0px;
+                margin: 0px;
+                line-height: 1.2em;
+            }
+
+            .site-branding-logo {
+                padding: 10px !important;
+                width: auto;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
-    <div class="first">
-        <div class="second">
+
+    <div class="hero">
+        <div class="intro">
             <p>Here's a paragraph</p>
             <ul>
                 <li>Thing</li>
@@ -19,14 +112,19 @@
                 <li>Thing</li>
             </ul>
         </div>
-        <div class="img"><img src="https://github.com/shayclarkoperations/sco_sizzy_test/blob/master/img/sizzy-400x300.jpg?raw=true" alt="image 1"></div>
+        <div class="img"><img
+                src="https://github.com/shayclarkoperations/sco_sizzy_test/blob/master/img/sizzy-400x300.jpg?raw=true"
+                alt="image 1"></div>
         <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOL2ega_aIo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/YOL2ega_aIo" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
-        <div class="img"><img src="https://github.com/shayclarkoperations/sco_sizzy_test/blob/master/img/sizzy-400x300.jpg?raw=true" alt="image 1"></div>
+        <div class="img"><img
+                src="https://github.com/shayclarkoperations/sco_sizzy_test/blob/master/img/sizzy-400x300.jpg?raw=true"
+                alt="image 1"></div>
     </div>
-    
 
 </body>
-</html>
 
+</html>
